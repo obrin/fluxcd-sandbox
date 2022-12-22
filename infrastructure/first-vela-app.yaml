@@ -10,4 +10,15 @@ spec:
         image: oamdev/hello-world
         ports:
          - port: 8000
-           expose: true
+           expose: false
+  policies:
+    - name: target-default
+      type: topology
+      properties:
+        clusters: ["local"]
+  workflow:
+    steps:
+      - name: deploy2default
+        type: deploy
+        properties:
+          policies: ["target-default"]
