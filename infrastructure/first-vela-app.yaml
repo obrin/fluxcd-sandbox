@@ -1,24 +1,24 @@
-apiVersion: core.oam.dev/v1beta1
-kind: Application
-metadata:
-  name: first-vela-app
-spec:
-  components:
-    - name: express-server
-      type: webservice
-      properties:
-        image: oamdev/hello-world
-        ports:
-         - port: 8000
-           expose: false
-  policies:
-    - name: target-default
-      type: topology
-      properties:
-        clusters: ["local"]
-  workflow:
-    steps:
-      - name: deploy2default
-        type: deploy
-        properties:
-          policies: ["target-default"]
+# apiVersion: core.oam.dev/v1beta1
+# kind: Application
+# metadata:
+#   name: first-vela-app
+# spec:
+#   components:
+#     - name: express-server
+#       type: webservice
+#       properties:
+#         image: oamdev/hello-world
+#         ports:
+#          - port: 8000
+#            expose: false
+#   policies:
+#     - name: target-default
+#       type: topology
+#       properties:
+#         clusters: ["local"]
+#   workflow:
+#     steps:
+#       - name: deploy2default
+#         type: deploy
+#         properties:
+#           policies: ["target-default"]

@@ -1,10 +1,10 @@
-apiVersion: core.oam.dev/v1beta1
-kind: Application
-metadata:
-  name: server
-spec:
-  components:
-    - name: server
-      type: webservice
-      properties:
-        image: nginx
+# apiVersion: core.oam.dev/v1beta1
+# kind: Application
+# metadata:
+#   name: server
+# spec:
+#   components:
+#     - name: server
+#       type: webservice
+#       properties:
+#         image: nginx
